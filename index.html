@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KisahSukses — Full</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header card">
+  <div><strong>KisahSukses</strong> — AI + YouTube + Games</div>
+  <div style="font-size:14px;color:#666">Render Static build</div>
+</header>
+
+<div class="container">
+  <main class="main">
+    <section class="card">
+      <h3>Chat AI</h3>
+      <div id="chatBox" class="chat-box"></div>
+      <div class="controls">
+        <input id="userInput" type="text" placeholder="Tanya sesuatu..." />
+        <button id="sendBtn" class="btn">Kirim</button>
+      </div>
+      <div style="margin-top:8px">
+        <label><input id="ttsToggle" type="checkbox" /> Aktifkan suara (Google TTS)</label>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:12px">
+      <h4>Quotes</h4>
+      <div id="quoteBox" class="quotes">Klik Random Quote untuk motivasi harian.</div>
+      <div style="margin-top:8px"><button id="quoteBtn" class="gbtn">Random Quote</button></div>
+    </section>
+  </main>
+
+  <aside class="side">
+    <section class="card">
+      <h4>YouTube Mini (Random play)</h4>
+      <div class="yt-frame" id="playerContainer"></div>
+      <div id="ytTitle" style="margin-top:8px;color:#333;font-weight:600"></div>
+      <div class="yt-controls" style="margin-top:8px">
+        <button id="prevVid" class="gbtn">Prev</button>
+        <button id="playPause" class="gbtn">Play/Pause</button>
+        <button id="nextVid" class="gbtn">Next</button>
+        <button id="randomSmall" class="gbtn">Random</button>
+      </div>
+    </section>
+
+    <section class="card games">
+      <h4>Games</h4>
+      <div style="display:flex;gap:8px;margin-bottom:8px">
+        <button class="gbtn" data-src="games/dino.html">Dino</button>
+        <button class="gbtn" data-src="games/tetris.html">Tetris</button>
+        <button class="gbtn" data-src="games/flappy.html">Flappy</button>
+      </div>
+      <iframe id="gameFrame" src="games/dino.html"></iframe>
+    </section>
+  </aside>
+</div>
+
+<div class="footer">Made with ❤️ — Replace HF key in config.js if you want to change model.</div>
+
+<script src="config.js"></script>
+<script src="client.js"></script>
+<script async src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
